@@ -1,0 +1,538 @@
+
+/* =================================
+   1. BASIC SETTINGS
+================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    color: #222;
+    background: #fff;
+    line-height: 1.6;
+}
+
+img {
+    max-width: 100%;
+}
+
+
+/* =================================
+   2. NAVBAR
+================================= */
+
+#nav {
+    background: rgb(212, 245, 208);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px 6%;
+}
+
+#nav h2 {
+    font-size: 25px;
+    color: #202820;
+    margin: 0;
+}
+
+#nav h2 span {
+    color: #39834a;
+}
+
+#part2 {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+#part2 a {
+    color: #252825;
+    font-size: 14px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+#part2 a:hover {
+    color: #39834a;
+}
+
+
+/* =================================
+   3. HERO SECTION / VIDEO
+================================= */
+
+.hero {
+    position: relative;
+    min-height: 650px;
+    height: 90vh;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    padding: 50px 9%;
+    background: #151915;
+}
+
+.hero video {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: brightness(55%);
+    z-index: 0;
+}
+
+.video-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+        90deg,
+        rgba(0, 0, 0, 0.75),
+        rgba(0, 0, 0, 0.15)
+    );
+    z-index: 1;
+}
+
+.heading {
+    position: relative;
+    z-index: 2;
+    max-width: 850px;
+    width: 100%;
+}
+
+.p1 {
+    color: #e8a45a;
+    font-size: 13px;
+    letter-spacing: 2px;
+    margin-bottom: 25px;
+}
+
+.heading h1 {
+    color: white;
+    font-size: clamp(40px, 6vw, 75px);
+    font-weight: 700;
+    line-height: 1.12;
+    margin-bottom: 25px;
+}
+
+.heading h1 span {
+    color: #9bdd80;
+    font-family: Georgia, serif;
+    font-style: italic;
+}
+
+.paragraph {
+    color: #f0f0f0;
+    font-size: 18px;
+    max-width: 580px;
+    margin-bottom: 25px;
+}
+
+.main-btn {
+    display: inline-block;
+    background: #c6f28b;
+    color: #172016;
+    padding: 12px 24px;
+    border-radius: 30px;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 700;
+    transition: 0.3s;
+}
+
+.main-btn:hover {
+    background: white;
+    color: #172016;
+    transform: translateY(-2px);
+}
+
+
+/* =================================
+   4. ABOUT SECTION
+================================= */
+
+.about-section {
+    display: flex;
+    align-items: center;
+    gap: 60px;
+    padding: 90px 8%;
+}
+
+.about-images {
+    flex: 1;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+}
+
+.about-images img {
+    width: 100%;
+    height: 340px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.about-images img:nth-child(2) {
+    margin-top: 35px;
+}
+
+.infromation {
+    flex: 1;
+    max-width: 550px;
+}
+
+.section-label {
+    color: #b76c29;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    margin-bottom: 15px;
+}
+
+.infromation h2 {
+    color: #222;
+    font-size: clamp(30px, 4vw, 45px);
+    line-height: 1.2;
+    margin-bottom: 22px;
+}
+
+.infromation p:not(.section-label) {
+    color: #666;
+    font-size: 15px;
+    margin-bottom: 22px;
+}
+
+.text-link {
+    color: #397c43;
+    text-decoration: none;
+    font-weight: 700;
+}
+
+.text-link:hover {
+    text-decoration: underline;
+}
+
+
+/* =================================
+   5. IMAGE CAROUSEL
+================================= */
+
+.gallery-section {
+    background: #f6f7f3;
+    padding: 70px 0;
+}
+
+.section-heading {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.section-heading h2 {
+    font-size: clamp(30px, 4vw, 42px);
+    color: #202820;
+}
+
+#myCarousel {
+    overflow: hidden;
+    border-radius: 12px;
+}
+
+#myCarousel .carousel-item img {
+    width: 100%;
+    height: 420px;
+    object-fit: cover;
+}
+
+
+/* =================================
+   6. PROJECT CARDS
+================================= */
+
+.productcard {
+    background: #fcfaf7;
+    padding: 75px 0;
+}
+
+.project-heading {
+    padding: 0 8%;
+    margin-bottom: 35px;
+}
+
+.project-heading h2 {
+    font-size: clamp(32px, 4vw, 48px);
+    font-weight: 700;
+    margin-bottom: 12px;
+}
+
+.project-heading > p:last-child {
+    color: #777;
+    font-size: 15px;
+}
+
+.card {
+    background: white;
+    border: 1px solid #eee !important;
+    border-radius: 12px !important;
+    overflow: hidden;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.1);
+}
+
+.card-img-top {
+    height: 220px;
+    width: 100%;
+    object-fit: cover;
+}
+
+.card-body {
+    padding: 22px !important;
+}
+
+.card-label {
+    color: #b76c29;
+    font-size: 11px;
+    letter-spacing: 1.5px;
+    font-weight: 700;
+}
+
+.card-title {
+    font-size: 21px;
+    font-weight: 700;
+    margin: 10px 0;
+}
+
+.card-text {
+    color: #777;
+    font-size: 14px;
+}
+
+.card-link {
+    display: inline-block;
+    color: #397c43;
+    font-size: 14px;
+    font-weight: 700;
+    text-decoration: none;
+    margin-top: 10px;
+}
+
+.card-link:hover {
+    color: #1b5125;
+}
+
+
+/* =================================
+   7. SKILLS SECTION
+================================= */
+
+.skills-section {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 70px;
+    align-items: center;
+    padding: 90px 8%;
+    background: #171b19;
+    color: white;
+}
+
+.skills-left h2 {
+    font-size: clamp(35px, 5vw, 55px);
+    line-height: 1.15;
+    margin-bottom: 20px;
+}
+
+.skills-left h2 span {
+    color: #c6f28b;
+    font-family: Georgia, serif;
+    font-style: italic;
+    font-weight: 400;
+}
+
+.skills-left > p:last-child {
+    color: #bfc5bf;
+    max-width: 450px;
+}
+
+.skills-right .skill {
+    margin-bottom: 25px;
+}
+
+.skill-name {
+    display: flex;
+    justify-content: space-between;
+    gap: 15px;
+    font-size: 14px;
+    margin-bottom: 9px;
+}
+
+.skill-name b:last-child {
+    color: #c6f28b;
+}
+
+.bar {
+    height: 6px;
+    border-radius: 10px;
+    background: #3a403c;
+    overflow: hidden;
+}
+
+.fill {
+    height: 100%;
+    background: #c6f28b;
+    border-radius: 10px;
+}
+
+
+/* =================================
+   8. FOOTER
+================================= */
+
+.footer {
+    background: #101312;
+    color: #f5f5f0;
+    padding: 50px 8% 20px;
+    border-top: 1px solid #303832;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 35px;
+    padding-bottom: 35px;
+}
+
+.footer-logo h2 {
+    font-size: 25px;
+    margin-bottom: 10px;
+}
+
+.footer-logo h2 span {
+    color: #c6f28b;
+}
+
+.footer p {
+    color: #aeb7af;
+    font-size: 13px;
+}
+
+.footer-links,
+.footer-contact {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.footer h3 {
+    font-size: 16px;
+    margin-bottom: 8px;
+}
+
+.footer-links a,
+.footer-contact a {
+    color: #aeb7af;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.footer-links a:hover,
+.footer-contact a:hover {
+    color: #c6f28b;
+}
+
+.footer-bottom {
+    border-top: 1px solid #303832;
+    padding-top: 20px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+.footer-bottom span {
+    color: #c6f28b;
+}
+
+
+/* =================================
+   9. MOBILE RESPONSIVE DESIGN
+================================= */
+
+@media (max-width: 768px) {
+
+    #nav {
+        flex-direction: column;
+        gap: 15px;
+        padding: 18px;
+    }
+
+    #part2 {
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 15px;
+    }
+
+    .hero {
+        min-height: 600px;
+        height: auto;
+        padding: 70px 7%;
+    }
+
+    .about-section {
+        flex-direction: column;
+        padding: 55px 7%;
+        gap: 35px;
+    }
+
+    .about-images {
+        width: 100%;
+    }
+
+    .about-images img {
+        height: 240px;
+    }
+
+    .infromation {
+        width: 100%;
+    }
+
+    #myCarousel .carousel-item img {
+        height: 280px;
+    }
+
+    .productcard {
+        padding: 55px 0;
+    }
+
+    .project-heading {
+        padding: 0 6%;
+    }
+
+    .skills-section {
+        grid-template-columns: 1fr;
+        gap: 35px;
+        padding: 60px 7%;
+    }
+
+    .footer-content {
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    .footer-bottom {
+        flex-direction: column;
+        text-align: center;
+    }
+}
